@@ -1,0 +1,50 @@
+// START HEADER
+.header{
+    padding: 4px 0;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    .container{
+        .navBar{
+            display: flex;
+            justify-content: space-between;
+            .logo{
+                display: flex;
+                align-items: center;
+                a{
+                    font-size: 32px;
+                }
+            }
+            .navList{
+                margin-left: 70px;
+                display: flex;
+                gap: 4px;
+                .navItem{
+                    padding: 10px 5px;
+                    .navLink{
+                        display: block;
+                        padding: 10px 0;
+                        @include link;
+                        color: #000;
+                    }
+                }
+            }
+            .social{
+                display: flex;
+                align-items: center;
+                gap: 32px;
+                padding-right: 6px;
+                a{
+                    display: block;
+                    font-size: 16px;
+                    transition: all .3s;
+                    &:hover{
+                        color: #ef6c57;
+                    }
+                }
+            }
+        }
+    }
+}
