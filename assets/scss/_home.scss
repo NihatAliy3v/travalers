@@ -1,5 +1,5 @@
 // START HERO
-#hero{
+.hero{
     background-image: url("../images/hero_bg_1.jpg.webp");
     background-repeat: no-repeat;
     background-position: 50% 0;
@@ -47,7 +47,9 @@
                 margin-bottom: 48px;
             }
             .book{
-                @include btn;
+                @include primary-button;
+                width: fit-content;
+
             }
         }
     }
@@ -55,7 +57,7 @@
 // END HERO
 
 // START EXPERIENCE
-#experience{
+.experience{
     padding: 80px 0;
     .container{
         .overlap{
@@ -103,7 +105,7 @@
 // END EXPERIENCE
 
 //  START TICKETING
-#packages{
+.packages{
     padding: 80px 0;
     .container{
         .packages-items{
@@ -114,7 +116,7 @@
 //  END TICKETING
 
 // START TESTIMONIALS
-#testimonials{
+.testimonials{
     padding: 80px 0;
     background-color: #f8f9fa;
     .container{
@@ -164,7 +166,7 @@
 // END TESTIMONIALS
 
 // START DESTINATIONS
-#destinations{
+.destinations{
     padding: 80px 0;
     .container{
         .title-box{
@@ -230,7 +232,7 @@
 // END DESTINATIONS
 
 // START VIDEOSERVICES
-#videoServices{
+.videoServices{
     width: 100%;
     height: 600px;
     background-image: url("../images/hero_bg_2.jpg.webp");
@@ -254,7 +256,7 @@
 // END VIDEOSERVICES
 
 // START SERVICES
-#services{
+.services{
     padding: 80px 0;
     .container{
         .title-box{
@@ -265,5 +267,188 @@
         }
     }
 }
-
 // END SERVICES
+// START VACATION
+.vacation{
+    padding: 80px 0;
+    .container{
+        .title-box{
+            @include title-box;
+        }
+        .vacation-cards{
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+            .card{
+                width: 50%;
+                .vacation-img{
+                    margin-bottom: 22px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .vacation-title{
+                    margin-bottom: 8px;
+                    line-height: 24px;
+                    a{
+                        font-size: 20px;
+                        color: $primary-color;
+                        transition: all .3s;
+                        font-weight: 400;
+                        &:hover{
+                            color: $primary-hover;
+                        }
+                    }
+                }
+                .name{
+                    color: #b3b3b3;
+                    font-size: 14px;
+                    font-weight: 300;
+                    margin-bottom: 24px;
+                    span{
+                        margin: 0 8px;
+                    }
+                    a{
+                        color: $primary-color;
+                        &:hover{
+                            color: $primary-hover;
+                        }
+                    }
+                    
+                }
+                .description{
+                    font-size: 16px; 
+                    font-weight: 300;
+                    line-height: 27px;
+                    color: #4d4d4d;
+                    margin-bottom: 16px;
+                }
+            }
+        }
+        .vacation-btn{
+            display: flex;
+            justify-content: center;
+            .btn-link{
+                @include transparent-button;
+                width: fit-content;
+            }
+        }
+    }
+}
+
+// END VACATION
+
+// START WANT-TRAVEL
+.want-travel{
+    padding: 80px 0;
+    .container{
+        .travel-title{
+            font-size: 32px;
+            margin-bottom: 48px;
+            font-weight: 400;
+            text-align: center;
+            line-height: 38px;
+        }
+        .travel-btn{
+            display: flex;
+            justify-content: center;
+            .btn-link{
+                @include primary-button;
+                width: fit-content;
+                &:hover{
+                    color: #000;
+                    border: 2px solid #000;
+                }
+            }
+        }
+        
+    }
+}
+// END WANT-TRAVEL
+
+// START FOOTER
+.footer{
+    padding: 128px 0;
+    background-color: #333;
+    .container{
+        .footer-cols{
+            display: flex;
+            gap: 30px;
+            .col{
+                width: 33.3%;
+                .title{
+                    font-size: 20px;
+                    color: #fff;
+                    font-weight: 400;
+                    margin-bottom: 24px;
+                    line-height: 24px;
+                }
+                .description{
+                    font-size: 16px;
+                    color: #737373;
+                    margin-bottom: 16px;
+                    line-height: 27px;
+                    font-weight: 300;
+                }
+                .navigation-container{
+                    display: flex;
+                    gap: 30px;
+                    .navigation{
+                        width: 50%;
+                        .nav-item{
+                            margin-bottom: 10px;
+                            line-height: 27px;
+                            .nav-link{
+                                font-size: 16px;
+                                color: #999;
+                                margin-bottom: 16px;
+                                font-weight: 300;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+            .email{
+                .title{
+                    margin-bottom: 8px;
+                }
+                .enter-email{
+                    width: 100%;
+                    height: 43px;
+                    display: flex;
+                    input{
+                        width: 80%;
+                        border: 1px solid #6c757d;
+                        border-right: none;
+                        outline: none;
+                        background-color: transparent;
+                        color: #fff;
+                        padding: 6px 12px;
+                        &::placeholder{
+                            
+                            font-size: 16px;
+                            
+                        }
+                    }
+                    button{
+                        width: 20%;
+                        border: none;
+                        outline: none;
+                        background-color: $primary-color;
+                        color: #fff;
+                        cursor: pointer;
+                        font-size: 16px;
+                        &:hover{
+                            color: #000;
+                            border: 2px solid #000;
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// END FOOTER
