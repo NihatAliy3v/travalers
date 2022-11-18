@@ -45,6 +45,41 @@
                     }
                 }
             }
+            .menu{
+                display: none;
+            }
         }
     }
+}
+@media(max-width:1200px){
+    .header{
+    padding: 4px 0;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    .container{
+        .navBar{
+            .navList{
+                display: none;
+            }
+            .social{
+                display: none;
+            }
+            .menu{
+                display: block;
+                .menu-link{
+                    padding: 10px 5px;
+                    display: block;
+                    i{
+                        font-size: 24px;
+                        display: block;
+                        padding: 10px 0;
+                    }
+                }
+            }
+        }
+    }
+}
 }
