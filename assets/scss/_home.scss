@@ -1,5 +1,5 @@
 // START HERO
-.hero{
+.hero-primary{
     background-image: url("../images/hero_bg_1.jpg.webp");
     background-repeat: no-repeat;
     background-position: 50% 0;
@@ -476,7 +476,7 @@
                     height: 43px;
                     display: flex;
                     input{
-                        width: 80%;
+                        width: 100%;
                         border: 1px solid #6c757d;
                         border-right: none;
                         outline: none;
@@ -490,7 +490,7 @@
                         }
                     }
                     button{
-                        width: 20%;
+                        padding: 6px 12px;
                         border: none;
                         outline: none;
                         background-color: $primary-color;
@@ -549,7 +549,7 @@
 // 576
 @media(max-width:576px){
     // hero
-    .hero{
+    .hero-primary{
         width: 100%;       
         .container{
             .hero-words{
@@ -607,11 +607,7 @@
     }
     //destinations
     .destinations{
-        padding: 80px 0;
         .container{
-            .title-box{
-                @include title-box;
-            }
             .destinations-cards{
                 display: flex;
                 flex-wrap: wrap;
@@ -622,8 +618,6 @@
                     display: block;
                     width: 100%;
                     height: 100%;
-                    position: relative;
-                    overflow: hidden;
                 }
                } 
             }
@@ -647,60 +641,15 @@
     }
     // vacation
     .vacation{
-        padding: 80px 0;
         .container{
-            .title-box{
-                @include title-box;
-            }
             .vacation-cards{
                 display: flex;
                 flex-wrap: wrap;
-                gap: 30px;
                 margin-bottom: 40px;
                 .card{
                     width: 100%;
                     .vacation-img{
                         margin-bottom: 22px;
-                        img{
-                            width: 100%;
-                            height: 100%;
-                        }
-                    }
-                    .vacation-title{
-                        margin-bottom: 8px;
-                        line-height: 24px;
-                        a{
-                            font-size: 20px;
-                            color: $primary-color;
-                            transition: all .3s;
-                            font-weight: 400;
-                            &:hover{
-                                color: $primary-hover;
-                            }
-                        }
-                    }
-                    .name{
-                        color: #b3b3b3;
-                        font-size: 14px;
-                        font-weight: 300;
-                        margin-bottom: 24px;
-                        span{
-                            margin: 0 8px;
-                        }
-                        a{
-                            color: $primary-color;
-                            &:hover{
-                                color: $primary-hover;
-                            }
-                        }
-                        
-                    }
-                    .description{
-                        font-size: 16px; 
-                        font-weight: 300;
-                        line-height: 27px;
-                        color: #4d4d4d;
-                        margin-bottom: 16px;
                     }
                 }
             }
@@ -723,29 +672,8 @@
                         margin-bottom: 48px;
                         .navigation{
                             width: 100%;
-                            .nav-item{
-                                margin-bottom: 10px;
-                                line-height: 27px;
-                               
-                            }
                         }
                         
-                    }
-                }
-                .email{
-                    .title{
-                        margin-bottom: 8px;
-                    }
-                    .description{
-                        margin-bottom: 16px;
-                    }
-                    .enter-email{
-                        input{
-                            width: 90%;
-                        }
-                        button{
-                            width: 10%;
-                        }
                     }
                 }
             }
@@ -755,7 +683,7 @@
 }
 @media(min-width:576px)and(max-width:768px){
     // hero
-    .hero{
+    .hero-primary{
         width: 100%;       
         .container{
             .hero-words{
@@ -798,7 +726,6 @@
                 flex-direction: column;
                 .left-img{
                     width: 100%;
-                    padding: 0 15px;
                     img{
                         width: 100%;
                         height: 100%;
@@ -813,11 +740,7 @@
     }
     //destinations
     .destinations{
-        padding: 80px 0;
         .container{
-            .title-box{
-                @include title-box;
-            }
             .destinations-cards{
                 display: flex;
                 flex-wrap: wrap;
@@ -828,8 +751,6 @@
                     display: block;
                     width: 100%;
                     height: 100%;
-                    position: relative;
-                    overflow: hidden;
                 }
                } 
             }
@@ -853,60 +774,19 @@
     }
     // vacation
     .vacation{
-        padding: 80px 0;
         .container{
-            .title-box{
-                @include title-box;
-            }
             .vacation-cards{
                 display: flex;
                 flex-wrap: wrap;
-                gap: 30px;
                 margin-bottom: 40px;
                 .card{
                     width: 100%;
                     .vacation-img{
                         margin-bottom: 22px;
-                        img{
-                            width: 100%;
-                            height: 100%;
-                        }
                     }
                     .vacation-title{
                         margin-bottom: 8px;
                         line-height: 24px;
-                        a{
-                            font-size: 20px;
-                            color: $primary-color;
-                            transition: all .3s;
-                            font-weight: 400;
-                            &:hover{
-                                color: $primary-hover;
-                            }
-                        }
-                    }
-                    .name{
-                        color: #b3b3b3;
-                        font-size: 14px;
-                        font-weight: 300;
-                        margin-bottom: 24px;
-                        span{
-                            margin: 0 8px;
-                        }
-                        a{
-                            color: $primary-color;
-                            &:hover{
-                                color: $primary-hover;
-                            }
-                        }
-                        
-                    }
-                    .description{
-                        font-size: 16px; 
-                        font-weight: 300;
-                        line-height: 27px;
-                        color: #4d4d4d;
-                        margin-bottom: 16px;
                     }
                 }
             }
@@ -929,29 +809,8 @@
                         margin-bottom: 48px;
                         .navigation{
                             width: 100%;
-                            .nav-item{
-                                margin-bottom: 10px;
-                                line-height: 27px;
-                               
-                            }
                         }
                         
-                    }
-                }
-                .email{
-                    .title{
-                        margin-bottom: 8px;
-                    }
-                    .description{
-                        margin-bottom: 16px;
-                    }
-                    .enter-email{
-                        input{
-                            width: 90%;
-                        }
-                        button{
-                            width: 10%;
-                        }
                     }
                 }
             }
@@ -962,7 +821,7 @@
 // 768
 @media(min-width:768px)and(max-width:992px){
     // hero
-    .hero{
+    .hero-ptimary{
         width: 100%;       
         .container{
             .hero-words{
@@ -1020,11 +879,7 @@
     }
     //destinations
     .destinations{
-        padding: 80px 0;
         .container{
-            .title-box{
-                @include title-box;
-            }
             .destinations-cards{
                 display: flex;
                 flex-wrap: wrap;
@@ -1035,8 +890,6 @@
                     display: block;
                     width: 100%;
                     height: 100%;
-                    position: relative;
-                    overflow: hidden;
                 }
                } 
             }
@@ -1073,16 +926,6 @@
                         
                     }
                 }
-                .email{
-                    .enter-email{
-                        input{
-                            width: 90%;
-                        }
-                        button{
-                            width: 10%;
-                        }
-                    }
-                }
             }
             
         }
@@ -1090,8 +933,8 @@
 }
 
 // 992
-@media(min-width:992px)and(max-width:1199px){
-    .hero{
+@media(min-width:992px)and(max-width:1200px){
+    .hero-primary{
         width: 100%;       
         .container{
             .hero-words{
@@ -1106,7 +949,5 @@
             }
         }
     }
-
-
 }
 

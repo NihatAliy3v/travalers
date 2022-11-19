@@ -159,7 +159,7 @@ a {
     padding: 10px 0;
   }
 }
-.hero {
+.hero-primary {
   background-image: url("../images/hero_bg_1.jpg.webp");
   background-repeat: no-repeat;
   background-position: 50% 0;
@@ -178,7 +178,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
 }
-.hero::after {
+.hero-primary::after {
   content: "";
   width: 100%;
   height: 100%;
@@ -186,7 +186,7 @@ a {
   background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
 }
-.hero .container {
+.hero-primary .container {
   z-index: 9;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -195,7 +195,7 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.hero .container .hero-words {
+.hero-primary .container .hero-words {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -213,7 +213,7 @@ a {
       -ms-user-select: none;
           user-select: none;
 }
-.hero .container .hero-words .title {
+.hero-primary .container .hero-words .title {
   text-transform: uppercase;
   font-size: 64px;
   font-weight: 300;
@@ -222,14 +222,14 @@ a {
   text-align: center;
   margin-bottom: 8px;
 }
-.hero .container .hero-words .description {
+.hero-primary .container .hero-words .description {
   text-align: center;
   color: rgba(255, 255, 255, 0.5);
   font-size: 19px;
   line-height: 1.5;
   margin-bottom: 48px;
 }
-.hero .container .hero-words .book {
+.hero-primary .container .hero-words .book {
   display: block;
   border: 2px solid transparent;
   padding: 16px 48px;
@@ -241,7 +241,7 @@ a {
   width: -moz-fit-content;
   width: fit-content;
 }
-.hero .container .hero-words .book:hover {
+.hero-primary .container .hero-words .book:hover {
   background-color: transparent;
   border: 2px solid #fff;
 }
@@ -857,7 +857,7 @@ a {
   display: flex;
 }
 .footer .container .footer-cols .email .enter-email input {
-  width: 80%;
+  width: 100%;
   border: 1px solid #6c757d;
   border-right: none;
   outline: none;
@@ -881,7 +881,7 @@ a {
   font-size: 16px;
 }
 .footer .container .footer-cols .email .enter-email button {
-  width: 20%;
+  padding: 6px 12px;
   border: none;
   outline: none;
   background-color: #ef6c57;
@@ -936,16 +936,16 @@ a {
 }
 
 @media (max-width: 576px) {
-  .hero {
+  .hero-primary {
     width: 100%;
   }
-  .hero .container .hero-words {
+  .hero-primary .container .hero-words {
     width: 540px;
   }
-  .hero .container .hero-words .title {
+  .hero-primary .container .hero-words .title {
     font-size: 32px;
   }
-  .hero .container .hero-words .description {
+  .hero-primary .container .hero-words .description {
     font-size: 19px;
   }
   .experience .container .overlap .overlapItem {
@@ -976,28 +976,6 @@ a {
     width: 100%;
     margin-left: 0;
   }
-  .destinations {
-    padding: 80px 0;
-  }
-  .destinations .container .title-box {
-    margin-bottom: 48px;
-  }
-  .destinations .container .title-box .title {
-    text-align: center;
-    font-size: 32px;
-    color: #000;
-    font-weight: 300;
-    margin-bottom: 8px;
-    line-height: 38px;
-  }
-  .destinations .container .title-box .next {
-    font-size: 16px;
-    font-weight: 300;
-    color: rgba(0, 0, 0, 0.5019607843);
-    line-height: 27px;
-    padding-bottom: 16px;
-    text-align: center;
-  }
   .destinations .container .destinations-cards {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1013,8 +991,6 @@ a {
     display: block;
     width: 100%;
     height: 100%;
-    position: relative;
-    overflow: hidden;
   }
   .videoServices .centered-services {
     width: 90%;
@@ -1022,35 +998,12 @@ a {
   .services .container .packages-items .packages-item {
     width: 100%;
   }
-  .vacation {
-    padding: 80px 0;
-  }
-  .vacation .container .title-box {
-    margin-bottom: 48px;
-  }
-  .vacation .container .title-box .title {
-    text-align: center;
-    font-size: 32px;
-    color: #000;
-    font-weight: 300;
-    margin-bottom: 8px;
-    line-height: 38px;
-  }
-  .vacation .container .title-box .next {
-    font-size: 16px;
-    font-weight: 300;
-    color: rgba(0, 0, 0, 0.5019607843);
-    line-height: 27px;
-    padding-bottom: 16px;
-    text-align: center;
-  }
   .vacation .container .vacation-cards {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    gap: 30px;
     margin-bottom: 40px;
   }
   .vacation .container .vacation-cards .card {
@@ -1058,46 +1011,6 @@ a {
   }
   .vacation .container .vacation-cards .card .vacation-img {
     margin-bottom: 22px;
-  }
-  .vacation .container .vacation-cards .card .vacation-img img {
-    width: 100%;
-    height: 100%;
-  }
-  .vacation .container .vacation-cards .card .vacation-title {
-    margin-bottom: 8px;
-    line-height: 24px;
-  }
-  .vacation .container .vacation-cards .card .vacation-title a {
-    font-size: 20px;
-    color: #ef6c57;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-    font-weight: 400;
-  }
-  .vacation .container .vacation-cards .card .vacation-title a:hover {
-    color: #e43216;
-  }
-  .vacation .container .vacation-cards .card .name {
-    color: #b3b3b3;
-    font-size: 14px;
-    font-weight: 300;
-    margin-bottom: 24px;
-  }
-  .vacation .container .vacation-cards .card .name span {
-    margin: 0 8px;
-  }
-  .vacation .container .vacation-cards .card .name a {
-    color: #ef6c57;
-  }
-  .vacation .container .vacation-cards .card .name a:hover {
-    color: #e43216;
-  }
-  .vacation .container .vacation-cards .card .description {
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 27px;
-    color: #4d4d4d;
-    margin-bottom: 16px;
   }
   .footer .container .footer-cols {
     display: -webkit-box;
@@ -1123,35 +1036,19 @@ a {
   }
   .footer .container .footer-cols .col .navigation-container .navigation {
     width: 100%;
-  }
-  .footer .container .footer-cols .col .navigation-container .navigation .nav-item {
-    margin-bottom: 10px;
-    line-height: 27px;
-  }
-  .footer .container .footer-cols .email .title {
-    margin-bottom: 8px;
-  }
-  .footer .container .footer-cols .email .description {
-    margin-bottom: 16px;
-  }
-  .footer .container .footer-cols .email .enter-email input {
-    width: 90%;
-  }
-  .footer .container .footer-cols .email .enter-email button {
-    width: 10%;
   }
 }
 @media (min-width: 576px) and (max-width: 768px) {
-  .hero {
+  .hero-primary {
     width: 100%;
   }
-  .hero .container .hero-words {
+  .hero-primary .container .hero-words {
     width: 540px;
   }
-  .hero .container .hero-words .title {
+  .hero-primary .container .hero-words .title {
     font-size: 32px;
   }
-  .hero .container .hero-words .description {
+  .hero-primary .container .hero-words .description {
     font-size: 19px;
   }
   .experience .container .overlap .overlapItem {
@@ -1172,7 +1069,6 @@ a {
   }
   .testimonials .container .testimonials-container .left-img {
     width: 100%;
-    padding: 0 15px;
   }
   .testimonials .container .testimonials-container .left-img img {
     width: 100%;
@@ -1181,28 +1077,6 @@ a {
   .testimonials .container .testimonials-container .testimonials-words {
     width: 100%;
     margin-left: 0;
-  }
-  .destinations {
-    padding: 80px 0;
-  }
-  .destinations .container .title-box {
-    margin-bottom: 48px;
-  }
-  .destinations .container .title-box .title {
-    text-align: center;
-    font-size: 32px;
-    color: #000;
-    font-weight: 300;
-    margin-bottom: 8px;
-    line-height: 38px;
-  }
-  .destinations .container .title-box .next {
-    font-size: 16px;
-    font-weight: 300;
-    color: rgba(0, 0, 0, 0.5019607843);
-    line-height: 27px;
-    padding-bottom: 16px;
-    text-align: center;
   }
   .destinations .container .destinations-cards {
     display: -webkit-box;
@@ -1219,8 +1093,6 @@ a {
     display: block;
     width: 100%;
     height: 100%;
-    position: relative;
-    overflow: hidden;
   }
   .videoServices .centered-services {
     width: 90%;
@@ -1228,35 +1100,12 @@ a {
   .services .container .packages-items .packages-item {
     width: 100%;
   }
-  .vacation {
-    padding: 80px 0;
-  }
-  .vacation .container .title-box {
-    margin-bottom: 48px;
-  }
-  .vacation .container .title-box .title {
-    text-align: center;
-    font-size: 32px;
-    color: #000;
-    font-weight: 300;
-    margin-bottom: 8px;
-    line-height: 38px;
-  }
-  .vacation .container .title-box .next {
-    font-size: 16px;
-    font-weight: 300;
-    color: rgba(0, 0, 0, 0.5019607843);
-    line-height: 27px;
-    padding-bottom: 16px;
-    text-align: center;
-  }
   .vacation .container .vacation-cards {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    gap: 30px;
     margin-bottom: 40px;
   }
   .vacation .container .vacation-cards .card {
@@ -1265,45 +1114,9 @@ a {
   .vacation .container .vacation-cards .card .vacation-img {
     margin-bottom: 22px;
   }
-  .vacation .container .vacation-cards .card .vacation-img img {
-    width: 100%;
-    height: 100%;
-  }
   .vacation .container .vacation-cards .card .vacation-title {
     margin-bottom: 8px;
     line-height: 24px;
-  }
-  .vacation .container .vacation-cards .card .vacation-title a {
-    font-size: 20px;
-    color: #ef6c57;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-    font-weight: 400;
-  }
-  .vacation .container .vacation-cards .card .vacation-title a:hover {
-    color: #e43216;
-  }
-  .vacation .container .vacation-cards .card .name {
-    color: #b3b3b3;
-    font-size: 14px;
-    font-weight: 300;
-    margin-bottom: 24px;
-  }
-  .vacation .container .vacation-cards .card .name span {
-    margin: 0 8px;
-  }
-  .vacation .container .vacation-cards .card .name a {
-    color: #ef6c57;
-  }
-  .vacation .container .vacation-cards .card .name a:hover {
-    color: #e43216;
-  }
-  .vacation .container .vacation-cards .card .description {
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 27px;
-    color: #4d4d4d;
-    margin-bottom: 16px;
   }
   .footer .container .footer-cols {
     display: -webkit-box;
@@ -1330,34 +1143,18 @@ a {
   .footer .container .footer-cols .col .navigation-container .navigation {
     width: 100%;
   }
-  .footer .container .footer-cols .col .navigation-container .navigation .nav-item {
-    margin-bottom: 10px;
-    line-height: 27px;
-  }
-  .footer .container .footer-cols .email .title {
-    margin-bottom: 8px;
-  }
-  .footer .container .footer-cols .email .description {
-    margin-bottom: 16px;
-  }
-  .footer .container .footer-cols .email .enter-email input {
-    width: 90%;
-  }
-  .footer .container .footer-cols .email .enter-email button {
-    width: 10%;
-  }
 }
 @media (min-width: 768px) and (max-width: 992px) {
-  .hero {
+  .hero-ptimary {
     width: 100%;
   }
-  .hero .container .hero-words {
+  .hero-ptimary .container .hero-words {
     width: 450px;
   }
-  .hero .container .hero-words .title {
+  .hero-ptimary .container .hero-words .title {
     font-size: 32px;
   }
-  .hero .container .hero-words .description {
+  .hero-ptimary .container .hero-words .description {
     font-size: 19px;
   }
   .experience .container .overlap .overlapItem {
@@ -1388,28 +1185,6 @@ a {
     width: 100%;
     margin-left: 0;
   }
-  .destinations {
-    padding: 80px 0;
-  }
-  .destinations .container .title-box {
-    margin-bottom: 48px;
-  }
-  .destinations .container .title-box .title {
-    text-align: center;
-    font-size: 32px;
-    color: #000;
-    font-weight: 300;
-    margin-bottom: 8px;
-    line-height: 38px;
-  }
-  .destinations .container .title-box .next {
-    font-size: 16px;
-    font-weight: 300;
-    color: rgba(0, 0, 0, 0.5019607843);
-    line-height: 27px;
-    padding-bottom: 16px;
-    text-align: center;
-  }
   .destinations .container .destinations-cards {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1425,8 +1200,6 @@ a {
     display: block;
     width: 100%;
     height: 100%;
-    position: relative;
-    overflow: hidden;
   }
   .services .container .packages-items .packages-item {
     width: 50%;
@@ -1458,24 +1231,143 @@ a {
     margin-bottom: 10px;
     line-height: 27px;
   }
-  .footer .container .footer-cols .email .enter-email input {
-    width: 90%;
-  }
-  .footer .container .footer-cols .email .enter-email button {
-    width: 10%;
-  }
 }
-@media (min-width: 992px) and (max-width: 1199px) {
-  .hero {
+@media (min-width: 992px) and (max-width: 1200px) {
+  .hero-primary {
     width: 100%;
   }
-  .hero .container .hero-words {
+  .hero-primary .container .hero-words {
     width: 610px;
   }
-  .hero .container .hero-words .title {
+  .hero-primary .container .hero-words .title {
     font-size: 64px;
   }
-  .hero .container .hero-words .description {
+  .hero-primary .container .hero-words .description {
     font-size: 19px;
+  }
+}
+.hero-secondary {
+  background-image: url("../images/hero_bg_2.jpg.webp");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  width: 100%;
+  height: 90vh;
+  min-height: 600px;
+  background-attachment: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+.hero-secondary::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+}
+.hero-secondary .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 9;
+}
+.hero-secondary .container .hero-words {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 760px;
+  margin-top: 100px;
+  font-weight: 300;
+}
+.hero-secondary .container .hero-words .title {
+  text-transform: uppercase;
+  font-size: 64px;
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 8px;
+}
+.hero-secondary .container .hero-words .description {
+  text-align: center;
+  color: #fff;
+  line-height: 1.5;
+  margin-bottom: 48px;
+  font-size: 16px;
+}
+.hero-secondary .container .hero-words .description a {
+  color: #ef6c57;
+  font-size: 16px;
+}
+.hero-secondary .container .hero-words .description span {
+  margin: 0 8px;
+  color: #fff;
+  font-size: 16px;
+}
+
+@media (max-width: 576px) {
+  .hero-secondary {
+    width: 100%;
+  }
+  .hero-secondary .container .hero-words {
+    width: 540px;
+  }
+  .hero-secondary .container .hero-words .title {
+    font-size: 32px;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .hero-secondary {
+    width: 100%;
+  }
+  .hero-secondary .container .hero-words {
+    width: 540px;
+  }
+  .hero-secondary .container .hero-words .title {
+    font-size: 32px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .hero-secondary {
+    width: 100%;
+  }
+  .hero-secondary .container .hero-words {
+    width: 450px;
+  }
+  .hero-secondary .container .hero-words .title {
+    font-size: 32px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .hero-secondary {
+    width: 100%;
+  }
+  .hero-secondary .container .hero-words {
+    width: 610px;
+  }
+  .hero-secondary .container .hero-words .title {
+    font-size: 64px;
   }
 }/*# sourceMappingURL=main.css.map */
