@@ -60,7 +60,7 @@ a {
 .header {
   padding: 4px 0;
   background-color: #fff;
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 99;
@@ -130,12 +130,103 @@ a {
 .header .container .navBar .menu {
   display: none;
 }
+.header .container .navBar .menu .menu-form label i {
+  cursor: pointer;
+  padding: 20px 0;
+  display: inline-block;
+  line-height: 28px;
+  font-size: 20px;
+}
+.header .container .navBar .menu .menu-form label i:last-child {
+  display: none;
+}
+.header .container .navBar .menu .menu-form input {
+  display: none;
+}
+.header .container .navBar .menu .menu-form input:checked ~ .slide-menu {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+.header .container .navBar .menu .menu-form input:checked + label i:first-child {
+  display: none;
+}
+.header .container .navBar .menu .menu-form input:checked + label i:last-child {
+  display: block;
+}
+.header .container .navBar .menu .menu-form .slide-menu {
+  background-color: #fff;
+  display: block;
+  position: fixed;
+  right: 0;
+  width: 300px;
+  height: 100vh;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  padding: 0 20px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.header .container .navBar .menu .menu-form .slide-menu .navList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 0;
+}
+.header .container .navBar .menu .menu-form .slide-menu .navList .navItem {
+  padding: 0;
+}
+.header .container .navBar .menu .menu-form .slide-menu .navList .navItem .navLink {
+  display: block;
+  padding: 10px 20px;
+  color: #ef6c57;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 300;
+  color: #000;
+  font-size: 20px;
+}
+.header .container .navBar .menu .menu-form .slide-menu .navList .navItem .navLink:hover {
+  color: #e43216;
+}
+.header .container .navBar .menu .menu-form .slide-menu .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0;
+  padding-right: 0;
+  padding-bottom: 80px;
+  margin-top: 30px;
+}
+.header .container .navBar .menu .menu-form .slide-menu .social a {
+  display: block;
+  font-size: 16px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  padding: 10px 16px;
+}
+.header .container .navBar .menu .menu-form .slide-menu .social a i {
+  font-size: 20px;
+}
+.header .container .navBar .menu .menu-form .slide-menu .social a:hover {
+  color: #ef6c57;
+}
 
 @media (max-width: 1200px) {
   .header {
     padding: 4px 0;
     background-color: #fff;
-    position: absolute;
     top: 0;
     width: 100%;
     z-index: 99;
@@ -148,15 +239,6 @@ a {
   }
   .header .container .navBar .menu {
     display: block;
-  }
-  .header .container .navBar .menu .menu-link {
-    padding: 10px 5px;
-    display: block;
-  }
-  .header .container .navBar .menu .menu-link i {
-    font-size: 24px;
-    display: block;
-    padding: 10px 0;
   }
 }
 .hero-primary {
