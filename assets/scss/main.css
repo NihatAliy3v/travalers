@@ -186,8 +186,7 @@ a {
   background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
 }
-.hero-primary .container {
-  z-index: 9;
+.hero-primary .container .center-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -195,7 +194,8 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.hero-primary .container .hero-words {
+.hero-primary .container .center-text .hero-words {
+  z-index: 9;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -213,7 +213,7 @@ a {
       -ms-user-select: none;
           user-select: none;
 }
-.hero-primary .container .hero-words .title {
+.hero-primary .container .center-text .hero-words .title {
   text-transform: uppercase;
   font-size: 64px;
   font-weight: 300;
@@ -222,14 +222,14 @@ a {
   text-align: center;
   margin-bottom: 8px;
 }
-.hero-primary .container .hero-words .description {
+.hero-primary .container .center-text .hero-words .description {
   text-align: center;
   color: rgba(255, 255, 255, 0.5);
   font-size: 19px;
   line-height: 1.5;
   margin-bottom: 48px;
 }
-.hero-primary .container .hero-words .book {
+.hero-primary .container .center-text .hero-words .book {
   display: block;
   border: 2px solid transparent;
   padding: 16px 48px;
@@ -237,11 +237,12 @@ a {
   color: #fff;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  cursor: pointer;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
-.hero-primary .container .hero-words .book:hover {
+.hero-primary .container .center-text .hero-words .book:hover {
   background-color: transparent;
   border: 2px solid #fff;
 }
@@ -488,9 +489,13 @@ a {
   z-index: 10;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  color: #fff;
+}
+.destinations .container .destinations-cards .card .card-link .card-words .deleted-salary {
+  color: #fff;
+  text-decoration: line-through;
 }
 .destinations .container .destinations-cards .card .card-link .card-words .salary {
-  display: block;
   text-align: center;
   color: #ef6c57;
   margin-bottom: 8px;
@@ -503,6 +508,9 @@ a {
 .destinations .container .destinations-cards .card .card-link:hover .card-words {
   -webkit-transform: translateY(-16px);
           transform: translateY(-16px);
+}
+.destinations .container .destinations-cards .card-top {
+  width: 50%;
 }
 
 .videoServices {
@@ -678,11 +686,15 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 30px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -15px;
   margin-bottom: 40px;
 }
 .vacation .container .vacation-cards .card {
+  padding: 0 15px;
   width: 50%;
+  margin-bottom: 24px;
 }
 .vacation .container .vacation-cards .card .vacation-img {
   margin-bottom: 22px;
@@ -779,6 +791,7 @@ a {
   color: #fff;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  cursor: pointer;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -790,6 +803,477 @@ a {
 .want-travel .container .travel-btn .btn-link:hover {
   color: #000;
   border: 2px solid #000;
+}
+
+@media (max-width: 576px) {
+  .hero-primary {
+    width: 100%;
+  }
+  .hero-primary .container .center-text .hero-words {
+    width: 540px;
+  }
+  .hero-primary .container .center-text .hero-words .title {
+    font-size: 32px;
+  }
+  .hero-primary .container .center-text .hero-words .description {
+    font-size: 19px;
+  }
+  .experience .container .overlap .overlapItem {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  .packages .container .packages-items .packages-item {
+    width: 100%;
+  }
+  .testimonials .container .testimonials-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .testimonials .container .testimonials-container .left-img {
+    width: 100%;
+    padding: 0 15px;
+  }
+  .testimonials .container .testimonials-container .left-img img {
+    width: 100%;
+    height: 100%;
+  }
+  .testimonials .container .testimonials-container .testimonials-words {
+    width: 100%;
+    margin-left: 0;
+  }
+  .destinations .container .destinations-cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .destinations .container .destinations-cards .card {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  .destinations .container .destinations-cards .card .card-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .videoServices .centered-services {
+    width: 90%;
+  }
+  .services .container .packages-items .packages-item {
+    width: 100%;
+  }
+  .vacation .container .vacation-cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  .vacation .container .vacation-cards .card {
+    width: 100%;
+  }
+  .vacation .container .vacation-cards .card .vacation-img {
+    margin-bottom: 22px;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .hero-primary {
+    width: 100%;
+  }
+  .hero-primary .container .center-text .hero-words {
+    width: 540px;
+  }
+  .hero-primary .container .center-text .hero-words .title {
+    font-size: 32px;
+  }
+  .hero-primary .container .center-text .hero-words .description {
+    font-size: 19px;
+  }
+  .experience .container .overlap .overlapItem {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  .packages .container .packages-items .packages-item {
+    width: 100%;
+  }
+  .testimonials .container .testimonials-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .testimonials .container .testimonials-container .left-img {
+    width: 100%;
+  }
+  .testimonials .container .testimonials-container .left-img img {
+    width: 100%;
+    height: 100%;
+  }
+  .testimonials .container .testimonials-container .testimonials-words {
+    width: 100%;
+    margin-left: 0;
+  }
+  .destinations .container .destinations-cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .destinations .container .destinations-cards .card {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  .destinations .container .destinations-cards .card .card-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .videoServices .centered-services {
+    width: 90%;
+  }
+  .services .container .packages-items .packages-item {
+    width: 100%;
+  }
+  .vacation .container .vacation-cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  .vacation .container .vacation-cards .card {
+    width: 100%;
+  }
+  .vacation .container .vacation-cards .card .vacation-img {
+    margin-bottom: 22px;
+  }
+  .vacation .container .vacation-cards .card .vacation-title {
+    margin-bottom: 8px;
+    line-height: 24px;
+  }
+  .footer .container .footer-cols {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0;
+  }
+  .footer .container .footer-cols .col {
+    width: 100%;
+  }
+  .footer .container .footer-cols .col .navigation-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 0;
+    margin-bottom: 48px;
+  }
+  .footer .container .footer-cols .col .navigation-container .navigation {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .hero-ptimary {
+    width: 100%;
+  }
+  .hero-ptimary .container .center-text .hero-words {
+    width: 450px;
+  }
+  .hero-ptimary .container .center-text .hero-words .title {
+    font-size: 32px;
+  }
+  .hero-ptimary .container .center-text .hero-words .description {
+    font-size: 19px;
+  }
+  .experience .container .overlap .overlapItem {
+    width: 50%;
+    margin-bottom: 24px;
+  }
+  .packages .container .packages-items .packages-item {
+    width: 50%;
+  }
+  .testimonials .container .testimonials-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .testimonials .container .testimonials-container .left-img {
+    width: 100%;
+    padding: 0 15px;
+  }
+  .testimonials .container .testimonials-container .left-img img {
+    width: 100%;
+    height: 100%;
+  }
+  .testimonials .container .testimonials-container .testimonials-words {
+    width: 100%;
+    margin-left: 0;
+  }
+  .destinations .container .destinations-cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .destinations .container .destinations-cards .card {
+    width: 50%;
+    margin-bottom: 24px;
+  }
+  .destinations .container .destinations-cards .card .card-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .services .container .packages-items .packages-item {
+    width: 50%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .hero-primary {
+    width: 100%;
+  }
+  .hero-primary .container .center-text .hero-words {
+    width: 610px;
+  }
+  .hero-primary .container .center-text .hero-words .title {
+    font-size: 64px;
+  }
+  .hero-primary .container .center-text .hero-words .description {
+    font-size: 19px;
+  }
+}
+.hero-secondary {
+  background-image: url("../images/hero_bg_2.jpg.webp");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  width: 100%;
+  height: 90vh;
+  min-height: 600px;
+  background-attachment: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+.hero-secondary::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+}
+.hero-secondary .container .center-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.hero-secondary .container .center-text .hero-words {
+  z-index: 9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 760px;
+  margin-top: 100px;
+  font-weight: 300;
+}
+.hero-secondary .container .center-text .hero-words .title {
+  text-transform: uppercase;
+  font-size: 64px;
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 8px;
+}
+.hero-secondary .container .center-text .hero-words .description {
+  text-align: center;
+  color: #fff;
+  line-height: 1.5;
+  margin-bottom: 48px;
+  font-size: 16px;
+}
+.hero-secondary .container .center-text .hero-words .description a {
+  color: #ef6c57;
+  font-size: 16px;
+}
+.hero-secondary .container .center-text .hero-words .description span {
+  margin: 0 8px;
+  color: #fff;
+  font-size: 16px;
+}
+
+@media (max-width: 576px) {
+  .hero-secondary {
+    width: 100%;
+  }
+  .hero-secondary .container .center-text .hero-words {
+    width: 540px;
+  }
+  .hero-secondary .container .center-text .hero-words .title {
+    font-size: 32px;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .hero-secondary {
+    width: 100%;
+  }
+  .hero-secondary .container .center-text .hero-words {
+    width: 540px;
+  }
+  .hero-secondary .container .center-text .hero-words .title {
+    font-size: 32px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .hero-secondary {
+    width: 100%;
+  }
+  .hero-secondary .container .center-text .hero-words {
+    width: 450px;
+  }
+  .hero-secondary .container .center-text .hero-words .title {
+    font-size: 32px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .hero-secondary {
+    width: 100%;
+  }
+  .hero-secondary .container .center-text .hero-words {
+    width: 610px;
+  }
+  .hero-secondary .container .center-text .hero-words .title {
+    font-size: 64px;
+  }
+}
+.contact {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+}
+.contact .container .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -15px;
+}
+.contact .container .row .send-message-container {
+  width: 57%;
+  padding: 0 15px;
+}
+.contact .container .row .send-message-container .send-message {
+  padding: 48px;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+}
+.contact .container .row .send-message-container .send-message .name-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -15px;
+}
+.contact .container .row .send-message-container .send-message .name-container .name {
+  width: 100%;
+  padding: 0 15px;
+  margin-bottom: 16px;
+}
+.contact .container .row .send-message-container .send-message .name-container .name label {
+  margin-bottom: 8px;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 300;
+}
+.contact .container .row .send-message-container .send-message .name-container .name input {
+  width: 100%;
+  height: 43px;
+  border: 1px solid #ced4da;
+  padding: 6px 12px;
+  outline: none;
+}
+.contact .container .row .send-message-container .send-message .name-container .name textarea {
+  width: 100%;
+  height: 182px;
+  border: 1px solid #ced4da;
+  resize: vertical;
+  padding: 6px 12px;
+  outline: none;
+}
+.contact .container .row .send-message-container .send-message .btn {
+  display: block;
+  border: 2px solid transparent;
+  padding: 16px 48px;
+  background-color: #ef6c57;
+  color: #fff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 8px 24px;
+  font-size: 16px;
+}
+.contact .container .row .send-message-container .send-message .btn:hover {
+  background-color: transparent;
+  border: 2px solid #fff;
+}
+.contact .container .row .send-message-container .send-message .btn:hover {
+  color: #000;
+  border: 2px solid #000;
+}
+.contact .container .row .learn-more-container {
+  width: 43%;
+  height: 500px;
+  padding: 0 15px;
+}
+.contact .container .row .learn-more-container .learn-more {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
 }
 
 .footer {
@@ -936,82 +1420,6 @@ a {
 }
 
 @media (max-width: 576px) {
-  .hero-primary {
-    width: 100%;
-  }
-  .hero-primary .container .hero-words {
-    width: 540px;
-  }
-  .hero-primary .container .hero-words .title {
-    font-size: 32px;
-  }
-  .hero-primary .container .hero-words .description {
-    font-size: 19px;
-  }
-  .experience .container .overlap .overlapItem {
-    width: 100%;
-    margin-bottom: 24px;
-  }
-  .packages .container .packages-items .packages-item {
-    width: 100%;
-  }
-  .testimonials .container .testimonials-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .testimonials .container .testimonials-container .left-img {
-    width: 100%;
-    padding: 0 15px;
-  }
-  .testimonials .container .testimonials-container .left-img img {
-    width: 100%;
-    height: 100%;
-  }
-  .testimonials .container .testimonials-container .testimonials-words {
-    width: 100%;
-    margin-left: 0;
-  }
-  .destinations .container .destinations-cards {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .destinations .container .destinations-cards .card {
-    width: 100%;
-    margin-bottom: 24px;
-  }
-  .destinations .container .destinations-cards .card .card-link {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-  .videoServices .centered-services {
-    width: 90%;
-  }
-  .services .container .packages-items .packages-item {
-    width: 100%;
-  }
-  .vacation .container .vacation-cards {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin-bottom: 40px;
-  }
-  .vacation .container .vacation-cards .card {
-    width: 100%;
-  }
-  .vacation .container .vacation-cards .card .vacation-img {
-    margin-bottom: 22px;
-  }
   .footer .container .footer-cols {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1039,85 +1447,6 @@ a {
   }
 }
 @media (min-width: 576px) and (max-width: 768px) {
-  .hero-primary {
-    width: 100%;
-  }
-  .hero-primary .container .hero-words {
-    width: 540px;
-  }
-  .hero-primary .container .hero-words .title {
-    font-size: 32px;
-  }
-  .hero-primary .container .hero-words .description {
-    font-size: 19px;
-  }
-  .experience .container .overlap .overlapItem {
-    width: 100%;
-    margin-bottom: 24px;
-  }
-  .packages .container .packages-items .packages-item {
-    width: 100%;
-  }
-  .testimonials .container .testimonials-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .testimonials .container .testimonials-container .left-img {
-    width: 100%;
-  }
-  .testimonials .container .testimonials-container .left-img img {
-    width: 100%;
-    height: 100%;
-  }
-  .testimonials .container .testimonials-container .testimonials-words {
-    width: 100%;
-    margin-left: 0;
-  }
-  .destinations .container .destinations-cards {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .destinations .container .destinations-cards .card {
-    width: 100%;
-    margin-bottom: 24px;
-  }
-  .destinations .container .destinations-cards .card .card-link {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-  .videoServices .centered-services {
-    width: 90%;
-  }
-  .services .container .packages-items .packages-item {
-    width: 100%;
-  }
-  .vacation .container .vacation-cards {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin-bottom: 40px;
-  }
-  .vacation .container .vacation-cards .card {
-    width: 100%;
-  }
-  .vacation .container .vacation-cards .card .vacation-img {
-    margin-bottom: 22px;
-  }
-  .vacation .container .vacation-cards .card .vacation-title {
-    margin-bottom: 8px;
-    line-height: 24px;
-  }
   .footer .container .footer-cols {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1145,65 +1474,6 @@ a {
   }
 }
 @media (min-width: 768px) and (max-width: 992px) {
-  .hero-ptimary {
-    width: 100%;
-  }
-  .hero-ptimary .container .hero-words {
-    width: 450px;
-  }
-  .hero-ptimary .container .hero-words .title {
-    font-size: 32px;
-  }
-  .hero-ptimary .container .hero-words .description {
-    font-size: 19px;
-  }
-  .experience .container .overlap .overlapItem {
-    width: 50%;
-    margin-bottom: 24px;
-  }
-  .packages .container .packages-items .packages-item {
-    width: 50%;
-  }
-  .testimonials .container .testimonials-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .testimonials .container .testimonials-container .left-img {
-    width: 100%;
-    padding: 0 15px;
-  }
-  .testimonials .container .testimonials-container .left-img img {
-    width: 100%;
-    height: 100%;
-  }
-  .testimonials .container .testimonials-container .testimonials-words {
-    width: 100%;
-    margin-left: 0;
-  }
-  .destinations .container .destinations-cards {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .destinations .container .destinations-cards .card {
-    width: 50%;
-    margin-bottom: 24px;
-  }
-  .destinations .container .destinations-cards .card .card-link {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-  .services .container .packages-items .packages-item {
-    width: 50%;
-  }
   .footer .container .footer-cols {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1230,144 +1500,5 @@ a {
   .footer .container .footer-cols .col .navigation-container .navigation .nav-item {
     margin-bottom: 10px;
     line-height: 27px;
-  }
-}
-@media (min-width: 992px) and (max-width: 1200px) {
-  .hero-primary {
-    width: 100%;
-  }
-  .hero-primary .container .hero-words {
-    width: 610px;
-  }
-  .hero-primary .container .hero-words .title {
-    font-size: 64px;
-  }
-  .hero-primary .container .hero-words .description {
-    font-size: 19px;
-  }
-}
-.hero-secondary {
-  background-image: url("../images/hero_bg_2.jpg.webp");
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  background-size: cover;
-  width: 100%;
-  height: 90vh;
-  min-height: 600px;
-  background-attachment: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: relative;
-}
-.hero-secondary::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  min-height: 600px;
-  background-color: rgba(0, 0, 0, 0.4);
-  position: absolute;
-}
-.hero-secondary .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  z-index: 9;
-}
-.hero-secondary .container .hero-words {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 760px;
-  margin-top: 100px;
-  font-weight: 300;
-}
-.hero-secondary .container .hero-words .title {
-  text-transform: uppercase;
-  font-size: 64px;
-  font-weight: 300;
-  color: #fff;
-  line-height: 1.5;
-  text-align: center;
-  margin-bottom: 8px;
-}
-.hero-secondary .container .hero-words .description {
-  text-align: center;
-  color: #fff;
-  line-height: 1.5;
-  margin-bottom: 48px;
-  font-size: 16px;
-}
-.hero-secondary .container .hero-words .description a {
-  color: #ef6c57;
-  font-size: 16px;
-}
-.hero-secondary .container .hero-words .description span {
-  margin: 0 8px;
-  color: #fff;
-  font-size: 16px;
-}
-
-@media (max-width: 576px) {
-  .hero-secondary {
-    width: 100%;
-  }
-  .hero-secondary .container .hero-words {
-    width: 540px;
-  }
-  .hero-secondary .container .hero-words .title {
-    font-size: 32px;
-  }
-}
-@media (min-width: 576px) and (max-width: 768px) {
-  .hero-secondary {
-    width: 100%;
-  }
-  .hero-secondary .container .hero-words {
-    width: 540px;
-  }
-  .hero-secondary .container .hero-words .title {
-    font-size: 32px;
-  }
-}
-@media (min-width: 768px) and (max-width: 992px) {
-  .hero-secondary {
-    width: 100%;
-  }
-  .hero-secondary .container .hero-words {
-    width: 450px;
-  }
-  .hero-secondary .container .hero-words .title {
-    font-size: 32px;
-  }
-}
-@media (min-width: 992px) and (max-width: 1200px) {
-  .hero-secondary {
-    width: 100%;
-  }
-  .hero-secondary .container .hero-words {
-    width: 610px;
-  }
-  .hero-secondary .container .hero-words .title {
-    font-size: 64px;
   }
 }/*# sourceMappingURL=main.css.map */

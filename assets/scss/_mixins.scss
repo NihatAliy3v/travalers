@@ -6,6 +6,7 @@
     background-color: $primary-color;
     color: #fff;
     transition: all .3s;
+    cursor: pointer;
     &:hover{
         background-color: transparent;
         border: 2px solid #fff;
