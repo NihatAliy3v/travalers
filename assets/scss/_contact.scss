@@ -3,11 +3,14 @@
     background-color: #f8f9fa;
     .container{
         .row{
+            margin: 0 -15px;    
             display: flex;
-            margin: 0 -15px;
+            flex-wrap: wrap;
             .send-message-container{
-                width:57%;
+                width:59%;
                 padding: 0 15px;
+                margin-bottom: 24px;
+                height: fit-content;
                 .send-message{
                     padding: 48px;
                     background-color: #fff;
@@ -56,14 +59,92 @@
                     }
                 }
             }
-            .learn-more-container{
-                width: 43%;
-                height: 500px;
-                padding: 0 15px;
-                .learn-more{
-                    background-color: #fff;
+            .right-side-container{
+                width: 41%;
+                .right-side{
+                    padding: 0 15px;
+                    .address{
+                        padding: 24px;
+                        background-color: #fff;
+                        margin-bottom: 24px;
+                        .address-title{
+                            font-size: 16px;
+                            font-weight: 700;
+                            color: #4d4d4d;
+                            line-height: 27px;
+                        }
+                        .address-words{
+                            font-size: 16px;
+                            line-height: 27px;
+                            font-weight: 300;
+                            margin-bottom: 24px;
+                            a{
+                                color: $primary-color;
+                            }
+                        }
+                        .address-words:nth-of-type(3){
+                            margin-bottom: 0;
+                        }
+                    }
+                    .more-info-container{
+                        background-color: #fff;
+                       .more-info{
+                            padding: 24px;
+                            .more-img{
+                                margin-bottom: 24px;
+                                img{
+                                    width: 100%;
+                                }
+                            }  
+                            .more-title{
+                                font-size: 20px;
+                                margin-bottom: 16px;
+                                line-height: 24px;
+                                font-weight: 500;
+                            } 
+                            .more-description{
+                                font-size: 16px;
+                                color: #4d4d4d;
+                                margin-bottom: 16px;
+                                line-height: 27px;
+                                font-weight: 300;
+                            } 
+                            .btn{
+                                @include primary-button;
+                                width: fit-content;
+                                padding: 8px 24px;
+                                font-size: 16px;
+                                margin-bottom: 16px;
+                                &:hover{
+                                    color: #000;
+                                    border: 2px solid #000;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:768px){
+    .contact{
+        .container{
+            .row{
+                display: flex;
+                .send-message-container{
                     width: 100%;
-                    height: 100%;
+                    margin-bottom: 48px;
+                    .send-message{
+                        .name-container{
+                            display: flex;
+                            flex-wrap: wrap;
+                        }
+                    }
+                }
+                .right-side-container{
+                    width: 100%;
                 }
             }
         }

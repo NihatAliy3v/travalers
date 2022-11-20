@@ -1276,14 +1276,20 @@ a {
   background-color: #f8f9fa;
 }
 .contact .container .row {
+  margin: 0 -15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 -15px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .contact .container .row .send-message-container {
-  width: 57%;
+  width: 59%;
   padding: 0 15px;
+  margin-bottom: 24px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .contact .container .row .send-message-container .send-message {
   padding: 48px;
@@ -1347,17 +1353,106 @@ a {
   color: #000;
   border: 2px solid #000;
 }
-.contact .container .row .learn-more-container {
-  width: 43%;
-  height: 500px;
+.contact .container .row .right-side-container {
+  width: 41%;
+}
+.contact .container .row .right-side-container .right-side {
   padding: 0 15px;
 }
-.contact .container .row .learn-more-container .learn-more {
+.contact .container .row .right-side-container .right-side .address {
+  padding: 24px;
   background-color: #fff;
+  margin-bottom: 24px;
+}
+.contact .container .row .right-side-container .right-side .address .address-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #4d4d4d;
+  line-height: 27px;
+}
+.contact .container .row .right-side-container .right-side .address .address-words {
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 300;
+  margin-bottom: 24px;
+}
+.contact .container .row .right-side-container .right-side .address .address-words a {
+  color: #ef6c57;
+}
+.contact .container .row .right-side-container .right-side .address .address-words:nth-of-type(3) {
+  margin-bottom: 0;
+}
+.contact .container .row .right-side-container .right-side .more-info-container {
+  background-color: #fff;
+}
+.contact .container .row .right-side-container .right-side .more-info-container .more-info {
+  padding: 24px;
+}
+.contact .container .row .right-side-container .right-side .more-info-container .more-info .more-img {
+  margin-bottom: 24px;
+}
+.contact .container .row .right-side-container .right-side .more-info-container .more-info .more-img img {
   width: 100%;
-  height: 100%;
+}
+.contact .container .row .right-side-container .right-side .more-info-container .more-info .more-title {
+  font-size: 20px;
+  margin-bottom: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+.contact .container .row .right-side-container .right-side .more-info-container .more-info .more-description {
+  font-size: 16px;
+  color: #4d4d4d;
+  margin-bottom: 16px;
+  line-height: 27px;
+  font-weight: 300;
+}
+.contact .container .row .right-side-container .right-side .more-info-container .more-info .btn {
+  display: block;
+  border: 2px solid transparent;
+  padding: 16px 48px;
+  background-color: #ef6c57;
+  color: #fff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 8px 24px;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+.contact .container .row .right-side-container .right-side .more-info-container .more-info .btn:hover {
+  background-color: transparent;
+  border: 2px solid #fff;
+}
+.contact .container .row .right-side-container .right-side .more-info-container .more-info .btn:hover {
+  color: #000;
+  border: 2px solid #000;
 }
 
+@media (max-width: 768px) {
+  .contact .container .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .contact .container .row .send-message-container {
+    width: 100%;
+    margin-bottom: 48px;
+  }
+  .contact .container .row .send-message-container .send-message .name-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .contact .container .row .right-side-container {
+    width: 100%;
+  }
+}
 .footer {
   padding: 128px 0;
   background-color: #333;
