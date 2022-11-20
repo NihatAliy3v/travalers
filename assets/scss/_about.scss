@@ -1,0 +1,205 @@
+// START ABOUT COMPANY
+.about-company{
+    padding: 80px 0;
+    .container{
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+            align-items: center;
+            .company-image{
+                padding: 0 15px;
+                width: 50%;
+                margin-bottom: 48px;
+                img{
+                    width: 100%;
+                }
+            }
+            .company-words{
+                padding: 0 15px 0 48px;
+                width: 50%;
+                .title{
+                    font-size: 32px;
+                    margin-bottom: 24px;
+                    font-weight: 300;
+                    line-height: 38px;
+                }
+                .description{
+                    font-size: 16px;
+                    margin-bottom: 24px;
+                    color: #4d4d4d;
+                    font-weight: 300;
+                    line-height: 27px;
+                }
+                .task-list{
+                    .list-item{
+                        font-size: 16px;
+                        margin-bottom: 16px;
+                        color: #4d4d4d;
+                        font-weight: 300;
+                        line-height: 27px;
+                        i{
+                            color: $primary-color;
+                            font-size: 20px;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// END ABOUT COMPANY
+// START OUT TIME
+.our-team{
+    padding: 80px 0;
+    .container{
+        .title-box{
+            @include title-box;
+        }
+        .row{
+            margin: 0 -15px;
+            .team-cards{
+                display: flex;
+                flex-wrap: wrap;
+                .card{
+                    width: 33.3%;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    padding: 0 15px;
+                    margin-bottom: 48px;
+                    .card-img{
+                        width: 175px;
+                        height: 175px;
+                        margin-bottom: 24px;
+
+                        img{
+                            border-radius: 50%;
+                            width: 100%;
+                        }
+                    }
+                    .card-title{
+                        font-size: 32px;
+                        margin-bottom: 24px;
+                        font-weight: 300;
+                        line-height: 38px;
+                    }
+                    .card-description{
+                        text-align: center;
+                        color: #4d4d4d;
+                        margin-bottom: 24px;
+                        line-height: 27px;
+                        font-weight: 300;
+                    }
+                    .social{
+                        margin-right: 16px;
+                        .social-link{
+                            padding: 0 16px;
+                            &:hover i{
+                                color: $primary-hover;
+                            }
+                            i{
+                                transition: all .3s;
+                                color: $primary-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// END OUT TIME
+
+// 992
+@media(min-width:992px)and(max-width:1200px){
+    .our-team{
+        .container{
+            .row{
+                .team-cards{
+                    .card{
+                        .card-img{
+                            width: 150px;
+                            height: 150px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// 768
+@media(min-width:768px)and(max-width:992px){
+    .our-team{
+        .container{
+            .row{
+                .team-cards{
+                    .card{
+                        width: 50%;
+                        .card-img{
+                            width: 165px;
+                            height: 165px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// 576
+@media(min-width:576px)and(max-width:768px){
+    .our-team{
+        .container{
+            .row{
+                .team-cards{
+                    .card{
+                        width: 100%;
+                        .card-img{
+                            width: 255px;
+                            height: 255px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// max 768
+@media(max-width:768px){
+    .about-company{
+        .container{
+            .row{
+                .company-image{
+                    width: 100%;
+                    img{
+                        width: 100%;
+                    }
+                }
+                .company-words{
+                    padding: 0 15px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+// max 576
+@media(max-width:576px){
+    .our-team{
+        .container{
+            .row{
+                .team-cards{
+                    .card{
+                        width: 100%;
+                        .card-img{
+                            width: 255px;
+                            height: 255px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

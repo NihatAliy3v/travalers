@@ -2,7 +2,7 @@
 .header{
     padding: 4px 0;
     background-color: #fff;
-    position: fixed;
+    position: absolute;
     top: 0;
     width: 100%;
     z-index: 99;
@@ -55,9 +55,6 @@
                             display: inline-block;
                             line-height: 28px;
                             font-size: 20px;
-                            &:last-child{
-                                display: none;
-                            }
                         }
                     }
                     input{
@@ -65,25 +62,31 @@
                         
                         &:checked~.slide-menu{
                             transform: translateX(0);
-                        }
-                        &:checked+label i:first-child{
-                            display: none;
-                        }
-                        &:checked+label i:last-child{
-                            display: block;
-                        }
-                        
+                        }    
                     }
                     .slide-menu{
                         background-color: #fff;
                         display: block;
                         position: fixed;
+                        top: 0;
                         right: 0;
                         width: 300px;
                         height: 100vh;
                         transform: translateX(100%);
                         padding: 0 20px;
                         transition: all .3s;
+                        .xmark{
+                            display: flex;
+                            justify-content: right;
+                            margin-top: 20px;
+                            margin-right: 10px;
+                            label{
+                                i{
+                                    font-size: 28px;
+                                    color: #4d4d4d;
+                                }
+                            }
+                        }
                         .navList{
                             display: flex;
                             flex-direction: column;
@@ -91,11 +94,12 @@
                             margin: 0;
                             .navItem{
                                 padding: 0;
+                                line-height: 34px;
                                 .navLink{
                                     display: block;
                                     padding: 10px 20px;
                                     @include link;
-                                    color: #000;
+                                    color: #212529;
                                     font-size: 20px;
                                 }
                             }
