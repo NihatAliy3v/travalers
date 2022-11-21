@@ -1,0 +1,310 @@
+// START HERO
+.hero-primary{
+    background-image: url("../images/hero_bg_1.jpg.webp");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        min-height: 600px;
+        background-color: #00000066;
+        position: absolute;
+    }
+    .container{
+        .center-text{
+            display: flex;
+            justify-content: center;
+            .hero-words{
+                z-index: 9;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 760px;
+                margin-top: 60px;
+                user-select: none;
+                .title{
+                    text-transform: uppercase;
+                    font-size: 64px;
+                    font-weight: 300;
+                    color: #fff;
+                    line-height: 1.5;   
+                    text-align: center;
+                    margin-bottom: 8px;
+                }
+                .description{
+                    text-align: center;
+                    color: rgba(255, 255, 255, 0.5);
+                    font-size: 19px;
+                    line-height: 1.5;   
+                    margin-bottom: 48px;
+                }
+                .book{
+                    @include primary-button;
+                    width: fit-content;
+    
+                }
+            }
+        }
+    }
+}
+// END HERO
+//  START TICKETING
+.packages{
+    padding: 80px 0;
+    .container{
+        .packages-items{
+            @include packages-items;
+        }
+    }
+}
+//  END TICKETING
+
+// START TESTIMONIALS
+.testimonials{
+    padding: 80px 0;
+    background-color: #f8f9fa;
+    .container{
+        .title{
+            text-align: center;
+            font-size: 32px;
+            color: #000;
+            font-weight: 300;
+            margin-bottom: 56px;
+            line-height: 38px;
+        }
+        .testimonials-container{
+                display: flex;
+            .left-img{
+                width: 50%;
+                padding: 0 15px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .testimonials-words{
+                margin-top: 50px;
+                width: 50%;
+                padding: 48px;
+                margin-left: -100px;
+                background-color: #fff;
+                align-self: center;
+                .description{
+                    font-size: 20px;
+                    font-weight: 300;
+                    line-height: 34px;
+                    margin-bottom: 16px;
+                }
+                .name{
+                    font-weight: 300;
+                    margin-bottom: 16px;
+                    em{
+                        line-height: 27px;
+                        color: #4d4d4d;
+                    }
+                    a{
+                        @include link;
+                    }
+                }
+            }
+        }
+    }
+}
+// END TESTIMONIALS
+// START DESTINATIONS
+.destinations{
+    padding: 80px 0;
+    .container{
+        .title-box{
+            @include title-box;
+        }
+        .destinations-cards{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+            
+           .card{
+            width: 33.3%;
+            margin-bottom: 24px;
+            padding: 0 15px;
+            .card-link{
+                display: block;
+                width: 100%;
+                height: 100%;
+                position: relative;
+                overflow: hidden;
+                &::after{
+                    @include after;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    transition: all .3s;
+                }
+                &:hover{
+                    img{
+                        transform: scale(1.05);
+                    }
+                }
+                .card-words{
+                    position: absolute;
+                    width: 100%;
+                    margin-bottom: 8px;
+                    bottom: 10px;
+                    text-align: center;
+                    z-index: 10;
+                    transition: all .3s;
+                    color: #fff;
+                    .deleted-salary{
+                        color: #fff;
+                        text-decoration: line-through;
+                    }
+                    .salary{
+                        text-align: center;
+                        color: $primary-color;
+                        margin-bottom: 8px;
+                    }
+                    .name{
+                        text-align: center;
+                        color: #fff;
+                        font-weight: 400;
+                    }
+                }
+                &:hover{
+                    .card-words{
+                        transform: translateY(-16px);
+                    }
+                }
+            }
+           } 
+           .card-top{
+                width: 50%;
+            }
+        }
+    }
+}
+// END DESTINATIONS
+
+// START SERVICES
+.services{
+    padding: 80px 0;
+    background-color: #f8f9fa;
+    .container{
+        .title-box{
+            @include title-box;
+        }
+        .packages-items{
+            @include packages-items;
+        }
+    }
+}
+// END SERVICES 
+// START VACATION
+.vacation{
+    padding: 80px 0;
+    .container{
+        .title-box{
+            @include title-box;
+        }
+        .vacation-cards{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+            margin-bottom: 40px;
+            .card{
+                padding: 0 15px;
+                width: 50%;
+                margin-bottom: 24px;
+                .vacation-img{
+                    margin-bottom: 22px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .vacation-title{
+                    margin-bottom: 8px;
+                    line-height: 24px;
+                    a{
+                        font-size: 20px;
+                        color: $primary-color;
+                        transition: all .3s;
+                        font-weight: 400;
+                        &:hover{
+                            color: $primary-hover;
+                        }
+                    }
+                }
+                .name{
+                    color: #b3b3b3;
+                    font-size: 14px;
+                    font-weight: 300;
+                    margin-bottom: 24px;
+                    span{
+                        margin: 0 8px;
+                    }
+                    a{
+                        color: $primary-color;
+                        &:hover{
+                            color: $primary-hover;
+                        }
+                    }
+                    
+                }
+                .description{
+                    font-size: 16px; 
+                    font-weight: 300;
+                    line-height: 27px;
+                    color: #4d4d4d;
+                    margin-bottom: 16px;
+                }
+            }
+        }
+        .vacation-btn{
+            display: flex;
+            justify-content: center;
+            .btn-link{
+                @include transparent-button;
+                width: fit-content;
+            }
+        }
+    }
+}
+
+// END VACATION
+// START WANT-TRAVEL
+.want-travel{
+    padding: 80px 0;
+    .container{
+        .travel-title{
+            font-size: 32px;
+            margin-bottom: 48px;
+            font-weight: 400;
+            text-align: center;
+            line-height: 38px;
+        }
+        .travel-btn{
+            display: flex;
+            justify-content: center;
+            .btn-link{
+                @include primary-button;
+                width: fit-content;
+                &:hover{
+                    color: #000;
+                    border: 2px solid #000;
+                }
+            }
+        }
+        
+    }
+}
+// END WANT-TRAVEL
